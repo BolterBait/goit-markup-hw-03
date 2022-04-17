@@ -334,12 +334,11 @@ section.advantages {
   background-color: #2f303a;
 }
 
-.logo-footer {
-  display: flex;
+a.logo.link.bottom {
+  display: block;
   margin-top: 60px;
   margin-bottom: 20px;
 }
-
 .address {
   display: flex;
   flex-direction: column;
@@ -359,7 +358,9 @@ footer .container {
   font-size: 14px;
   line-height: 1.71;
 }
+
 .post-address {
+  display: block;
   margin-bottom: 9px;
 }
 
@@ -369,6 +370,7 @@ footer .container {
 
 .mail,
 .tel {
+  display: block;
   color: rgba(255, 255, 255, 0.6);
 }
 
