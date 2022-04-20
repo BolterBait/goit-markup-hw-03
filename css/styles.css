@@ -16,6 +16,13 @@ ul {
   list-style: none;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 /*             Header          */
 .logo {
   font-family: Raleway, sans-serif;
@@ -112,10 +119,6 @@ img {
 .project-link {
   text-decoration: none;
 }
-.list,
-.team-link {
-  list-style-type: none;
-}
 
 .mail-link,
 .tel-link {
@@ -145,14 +148,6 @@ img {
 .page-header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
-}
-
-.page-header.portfolio {
-  margin-bottom: 94px;
-}
-
-.portfolio {
-  margin-bottom: 94px;
 }
 
 .hero {
@@ -208,7 +203,7 @@ img {
   border: 1px solid #eeeeee;
 }
 
-.list.filter:not(:last-child) {
+.list.item:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -220,19 +215,21 @@ img {
 
 .filter {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.list.filter {
-  margin-bottom: 0;
-}
-.header-advantages,
-.header-portolio {
-  display: none;
-  margin-top: 0;
-  margin-bottom: 0;
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .advantages-header {
@@ -416,31 +413,26 @@ img {
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--text-decoration-color);
-  margin: 0px 24px 4px 24px;
+  margin-bottom: 4px;
 }
+
 .project-type {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  margin: 0px 24px 0px 24px;
   color: var(--second-text-color);
 }
 
 .project-card-content {
-  margin-bottom: 20px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  padding: 20px 24px 20px 24px;
 }
 
-.project-name {
+/* .project-name {
   padding-top: 20px;
-}
-
-.projects .list {
-  background: #ffffff;
-  box-sizing: border-box;
-}
+} */
 
 .projects {
   list-style: none;
@@ -450,10 +442,12 @@ img {
   margin-top: calc(-1 * var(--projects-card-gap));
 }
 
-.projects > .list {
+.projects-list {
   flex-basis: calc(100% / 3 - var(--projects-card-gap));
   margin-left: var(--projects-card-gap);
   margin-top: var(--projects-card-gap);
+  background: #ffffff;
+  box-sizing: border-box;
 }
 
 .mail,
